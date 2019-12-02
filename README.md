@@ -27,7 +27,8 @@
 |image|string||
 |body|text||
 ### Association
-- belongs_to :groups
+- belongs_to :group
+- belongs_to :user
 
 ## groups_usersテーブル
 |Column|Type|Options|
