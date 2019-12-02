@@ -15,7 +15,9 @@
 |------|----|-------|
 |name|text|null: false|
 ### Association
-- belongs_to :messages
+- has_many :messages
+- has_many :users
+- has_many :groups_users
 
 ## messagesテーブル
 |Column|Type|Options|
