@@ -13,7 +13,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group-name|text|null: false|
+|name|text|null: false|
 ### Association
 - belongs_to :messages
 
