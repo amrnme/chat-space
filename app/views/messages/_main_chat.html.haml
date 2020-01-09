@@ -1,0 +1,39 @@
+.main_chat
+  .main-header
+    .main-header__left-box
+      .main-header__left-box__current-group
+        コーラ
+      .main-header__left-box__member-list
+        Member：watanabe
+    .main-header__edit-btn
+      Edit
+  .main_chat__message-list
+    .messages
+      .message1
+        .message1__upper-info
+          .message1__upper-info__talker
+            watanabe
+          .message1__upper-info__date
+            2019/12/14(Sat) 20:11:17
+        .message1__text
+          やっぱりコーラです。
+
+      .message2
+        .message2__upper-info
+          .message2__upper-info__talker
+            watanabe
+          .message2__upper-info__date
+            2019/12/14(Sat) 20:11:40
+        .message2__text
+          当然、コカコーラです。
+  .main_chat__message-form
+    .new__message
+      .input-box
+        .input-box__text
+          type a message
+        .input-box__image
+          %label.input-box__image__file
+            =icon('far', "far fa-image")
+            %input{type: "file", class:"input-box__image__file_text"}
+      .submit-btn
+        Send
