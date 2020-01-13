@@ -17,16 +17,18 @@
       height: 20px;
       line-height: 20px;
       width: 260px;
+      color: white;
+      font-weight: bold;
       display: flex;
       justify-content: space-between;
     }
-      &__user-name-box-left {
-        height: 20px;
-        width: 100px;
-        color: white;
-        font-weight: bold;
-        float: left
-      }
+      // &__user-name-box-left {
+      //   height: 20px;
+      //   width: 100px;
+      //   color: white;
+      //   font-weight: bold;
+      //   float: left
+      // }
       &__user-name-box-icon {
         height: 20px;
         width: 60px;
