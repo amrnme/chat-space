@@ -1,12 +1,13 @@
 .side_bar
   .side_bar__user-name
     .side_bar__user-name-box
+      = current_user.name
       .side_bar__user-name-box-left
-        watanabe
+      
       .side_bar__user-name-box-icon
         =link_to "#", class: "fa-pull-right icon1 fa-pull-right" do
           = icon('fas', 'fas fa-cog')
-        =link_to "#", class: "fa-pull-right icon2 fa-pull-right" do
+        =link_to edit_user_path(current_user) , class: "fa-pull-right icon2 fa-pull-right" do
           = icon('fas', 'fas fa-edit')
 
   .side_bar__groups
