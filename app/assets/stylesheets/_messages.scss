@@ -34,28 +34,22 @@
           margin-left: 5px;
         }
 
-  &__groups {
+  &__groups  {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 20px 20px 0 20px;
     color: #ffffff;
-    &__group1-name {
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
-    &__group1__last-message {
-      font-size: 11px;
-      margin-bottom: 40px;
-    }
-    &__group2-name {
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
-    &__group2__last-message {
-      font-size: 11px;
-      margin-bottom: 40px;
-    }
   }
+    .group__name {
+      font-size: 15px;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+    .group__message {
+      font-size: 11px;
+      margin-bottom: 40px;
+      color: #ffffff;
+    }
 }
 
 .main_chat {

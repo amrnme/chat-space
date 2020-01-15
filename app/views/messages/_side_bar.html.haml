@@ -7,17 +7,25 @@
       .side_bar__user-name-box-icon
         =link_to "#", class: "fa-pull-right icon1 fa-pull-right" do
           = icon('fas', 'fas fa-cog')
-        =link_to edit_user_path(current_user) , class: "fa-pull-right icon2 fa-pull-right" do
+        =link_to new_group_path , class: "fa-pull-right icon2 fa-pull-right" do
           = icon('fas', 'fas fa-edit')
 
   .side_bar__groups
-    .side_bar__groups__group1
-      .side_bar__groups__group1-name
-        コーラ
-      .side_bar__groups__group1__last-message
-        当然、コカコーラです。
-    .side_bar__groups__group2
-      .side_bar__groups__group2-name
-        新幹線
-      .side_bar__groups__group2__last-message
-        東京まで5時間です。
+    - current_user.groups.each do |group|
+      .group
+        =link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
+
+    -# .side_bar__groups__group1
+    -#   .side_bar__groups__group1-name
+    -#     コーラ
+    -#   .side_bar__groups__group1__last-message
+    -#     当然、コカコーラです。
+    -# .side_bar__groups__group2
+    -#   .side_bar__groups__group2-name
+    -#     新幹線
+    -#   .side_bar__groups__group2__last-message
+    -#     東京まで5時間です。
