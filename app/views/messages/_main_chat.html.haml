@@ -2,38 +2,21 @@
   .main-header
     .main-header__left-box
       .main-header__left-box__current-group
-        コーラ
+        =@group.name
       .main-header__left-box__member-list
-        Member：watanabe
+        -@group.users.each do |user|
+          =user.name
     .main-header__edit-btn
-      Edit
+      =link_to "Edit", edit_group_path(@group) , class: 'btn'
   .main_chat__message-list
     .messages
-      .message1
-        .message1__upper-info
-          .message1__upper-info__talker
-            watanabe
-          .message1__upper-info__date
-            2019/12/14(Sat) 20:11:17
-        .message1__text
-          やっぱりコーラです。
-
-      .message2
-        .message2__upper-info
-          .message2__upper-info__talker
-            watanabe
-          .message2__upper-info__date
-            2019/12/14(Sat) 20:11:40
-        .message2__text
-          当然、コカコーラです。
-  .main_chat__message-form
+      =render @messages
+  .main_chat__form__message
     .new__message
-      .input-box
-        .input-box__text
-          type a message
-        .input-box__image
-          %label.input-box__image__file
-            =icon('far', "far fa-image")
-            %input{type: "file", class:"input-box__image__file_text"}
-      .submit-btn
-        Send
+      = form_for [@group, @message] do |f|
+        =f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

@@ -34,28 +34,22 @@
           margin-left: 5px;
         }
 
-  &__groups {
+  &__groups  {
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 20px 20px 0 20px;
     color: #ffffff;
-    &__group1-name {
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
-    &__group1__last-message {
-      font-size: 11px;
-      margin-bottom: 40px;
-    }
-    &__group2-name {
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
-    &__group2__last-message {
-      font-size: 11px;
-      margin-bottom: 40px;
-    }
   }
+    .group__name {
+      font-size: 15px;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+    .group__message {
+      font-size: 11px;
+      margin-bottom: 40px;
+      color: #ffffff;
+    }
 }
 
 .main_chat {
@@ -146,50 +140,48 @@
         }
       }
 
-  &__message-form {
+  &__form__message {
     height: 90px;
     padding: 20px 40px;
     background-color: #ddd;
   }
-    .new__message {
+    .new_message {
       display: flex;
     }
-      .input-box {
+      .form__mask {
         position: relative;
-        width: 100%;
+        // width: 100%;
         background-color: #ffffff;
-        &__text {
+      }
+        .form__message {
           height: 50px;
           line-height: 50px;
           width: 100%;
           color: #434a54;
           padding: 0 40px 0 10px;
+          position: relative;
         }
-        &__image {
-          position: absolute;
-          font-size: 1.4rem;
-          top: 10px;
-          right: 10px;
-          &__file {
-            cursor: pointer;
+          .form__mask__image {
+            position: absolute;
+            font-size: 1.4rem;
+            top: 10px;
+            right: 10px;
           }
-          &__file_text {
+          .hidden {
             display:none;
           }
+          .icon {
+            color: #000;
+            cursor: pointer;
+          }
+        .form__submit {
+          height: 50px;
+          line-height: 50px;
+          width: 100px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+          cursor: pointer;
         }
-      }
-
-      .icon {
-        color: #000;
-      }
-      .submit-btn {
-        height: 50px;
-        line-height: 50px;
-        width: 100px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: #38aef0;
-        color: white;
-        cursor: pointer;
-      }
 }
