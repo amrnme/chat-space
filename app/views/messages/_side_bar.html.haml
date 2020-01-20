@@ -13,19 +13,8 @@
   .side_bar__groups
     - current_user.groups.each do |group|
       .group
-        =link_to '#' do
+        =link_to group_messages_path(group) do
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません。
-
-    -# .side_bar__groups__group1
-    -#   .side_bar__groups__group1-name
-    -#     コーラ
-    -#   .side_bar__groups__group1__last-message
-    -#     当然、コカコーラです。
-    -# .side_bar__groups__group2
-    -#   .side_bar__groups__group2-name
-    -#     新幹線
-    -#   .side_bar__groups__group2__last-message
-    -#     東京まで5時間です。
+            = group.show_last_message
