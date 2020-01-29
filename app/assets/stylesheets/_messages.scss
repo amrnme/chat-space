@@ -30,7 +30,6 @@
         .fa-pull-right {
           color:  #ffffff;
           font-size: 14px;
-          text-decoration: none;
           margin-left: 5px;
         }
 
@@ -39,6 +38,7 @@
     background-color: #2f3e51;
     padding: 20px 20px 0 20px;
     color: #ffffff;
+    overflow: scroll;
   }
     .group__name {
       font-size: 15px;
@@ -55,7 +55,7 @@
 .main_chat {
   height: 100vh;
   width: calc(100vw - 300px);
-  float: right;
+  float: left;
     .main-header {
       height: 100px;
       background-color: #ffffff;
@@ -84,60 +84,47 @@
         color: #38aef0;
         position: absolute;
         right: 40px;
+        text-decoration: none;
       }
+    }
+    .btn {
+      text-decoration: none;
     }
 
   &__message-list {
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
+    overflow: scroll;
   }
     .messages {
       padding: 46px 40px;
     }
-      .message1 {
+      .upper-message {
         padding-bottom: 40px;
-        &__upper-info {
-          display: flex;
-          margin-bottom: 10px;
-          &__talker {
-            color: #434a54;
-            font-size: 16px;
-            font-weight: bold;
-          }
-          &__date {
-            color: #999999;
-            font-size: 12px;
-            margin-left: 10px;
-          }
-        }
-        &__text {
-          color: #434a54;
-          font-size: 14px;
-          margin-bottom: 10px;
-        }
       }
-
-      .message2 {
-        padding-bottom: 40px;
-        &__upper-info {
-          display: flex;
-          margin-bottom: 10px;
-          &__talker {
-            color: #434a54;
-            font-size: 16px;
-            font-weight: bold;
-          }
-          &__date {
-            color: #999999;
-            font-size: 12px;
-            margin-left: 10px;
-          }
+        .upper-message__upper-info {
+        display: flex;
+        margin-bottom: 10px;
         }
-        &__text {
+        .upper-message__user-name {
           color: #434a54;
-          font-size: 14px;
-          margin-bottom: 10px;
+          font-size: 16px;
+          font-weight: bold;
         }
+        .upper-message__date {
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      .upper-message__text {
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .lower-message__content {
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 10px;
       }
 
   &__form__message {
@@ -150,7 +137,6 @@
     }
       .form__mask {
         position: relative;
-        // width: 100%;
         background-color: #ffffff;
       }
         .form__message {
