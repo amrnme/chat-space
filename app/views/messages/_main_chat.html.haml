@@ -4,13 +4,15 @@
       .main-header__left-box__current-group
         =@group.name
       .main-header__left-box__member-list
+        Member : 
         -@group.users.each do |user|
           =user.name
     .main-header__edit-btn
       =link_to "Edit", edit_group_path(@group) , class: 'btn'
   .main_chat__message-list
     .messages
-      =render @messages
+      .new__message
+        =render @messages
   .main_chat__form__message
     .new__message
       = form_for [@group, @message] do |f|
