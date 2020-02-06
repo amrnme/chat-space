@@ -89,6 +89,12 @@
         right: 40px;
         text-decoration: none;
       }
+      .main-header__edit-btn a:link,
+      .main-header__edit-btn a:visited,
+      .main-header__edit-btn a:hover,
+      .main-header__edit-btn a:active {
+        color: #38aef0;
+      }
     }
     .btn {
       text-decoration: none;
